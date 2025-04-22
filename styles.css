@@ -1,0 +1,197 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section */
+#hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: rgb(9, 9, 9);
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#hero .hero-content p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Recommendations Section */
+#recommendations {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.recommendation {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.recommendation:hover {
+    transform: scale(1.05);
+}
+
+.recommendation h2 {
+    background-color: #ff6347;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.8rem;
+}
+
+.recommendation-images {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.recommendation-images img {
+    width: 48%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* About and Contact Section */
+#about-us, #contact-us {
+    padding: 50px 20px;
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+#about-us h1, #contact-us h1 {
+    font-size: 2.5rem;
+    color: #ff6347;
+}
+
+#about-us p, #contact-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 20px 0;
+}
+
+/* Form Styles for Contact Us */
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#contact-us label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact-us input, #contact-us textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-us button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact-us button:hover {
+    background-color: #e5533f;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #recommendations {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    #recommendations {
+        grid-template-columns: 1fr;
+    }
+
+    #hero .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    #hero .hero-content p {
+        font-size: 1rem;
+    }
+}
